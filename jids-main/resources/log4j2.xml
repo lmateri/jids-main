@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Konfiguration eines Datei-Appenders -->
+        <File name="LogFile" fileName="${date:dd-MM-yyyy-HH-mm-ss}.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} - %msg%n" charset="UTF-8"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <!-- Definieren Sie den Root-Logger -->
+        <Root level="debug">
+            <AppenderRef ref="LogFile"/> <!-- Verweisen Sie auf den Datei-Appender -->
+        </Root>
+    </Loggers>
+</Configuration>
